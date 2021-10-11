@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     public void LoadLevel()
     {
         zombieCount = 0;
-        if (SceneManager.GetActiveScene().buildIndex != 6)
+        if (SceneManager.GetActiveScene().buildIndex != 7)
         {
             currentScene = 1;
         } else
