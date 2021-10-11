@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviour
     private float speed = 4.0f;
     Rigidbody2D rb;
 
-    private float health = 200;
+    private float health = 400;
     private float startHealth;
 
     public bool turnedLeft = false;
@@ -69,6 +69,7 @@ public class PlayerScript : MonoBehaviour
                 mainText.gameObject.SetActive(true);
                 mainText.text = "Game Over";
                 redOverlay.gameObject.SetActive(true);
+                GetComponent<PlayerScript>().enabled = false;
             }
             Vector2 temp = new Vector2(healthWidth * (health / startHealth), healthFill.sprite.rect.height);
             healthFill.rectTransform.sizeDelta = temp;
